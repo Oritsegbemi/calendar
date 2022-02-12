@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #c5f1ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  width: 1200px;
+  height: 650px;
+  border-radius: 14px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#322f44), to(#2e2d2d));
+  background: linear-gradient(to bottom right, #322f44, #2e2d2d);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.wrapper .calender {
+  width: 870px;
+  height: inherit;
+  padding: 55px 80px 50px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper .calender .cal-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  padding: 0 40px;
+  margin-bottom: 60px;
+  margin-top: 17px;
+}
+
+.wrapper .calender .cal-nav .back {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.wrapper .calender .cal-nav .mon-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .calender .cal-nav .mon-nav .prev,
+.wrapper .calender .cal-nav .mon-nav .next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  color: #dee2c6;
+}
+
+.wrapper .calender .cal-nav .mon-nav .month {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 0 26px;
+}
+
+.wrapper .cal-table table {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.wrapper .cal-table table tr {
+  height: 75px;
+}
+
+.wrapper .cal-table table tr th {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+  color: #dee2c6;
+}
+
+.wrapper .cal-table table tr td {
+  text-align: center;
+  color: #f8f9fa;
+  cursor: pointer;
+  font-size: small;
+  position: relative;
+}
+
+.wrapper .cal-table table .grey {
+  color: grey;
+}
+
+.wrapper .cal-table table .orange {
+  color: #ff4b4c;
+}
+
+.wrapper .cal-table table .filled {
+  position: relative;
+}
+
+.wrapper .cal-table table .filled::after {
+  content: "";
+  width: 42px;
+  height: 42px;
+  background-color: #ff4b4c;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-radius: 10px;
+}
+
+.wrapper .cal-table table .filled span {
+  position: relative;
+  z-index: 15;
+}
+
+.wrapper .cal-table table .line {
+  position: relative;
+}
+
+.wrapper .cal-table table .line::after {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background-color: #24f892;
+  position: absolute;
+  left: 50%;
+  top: 45px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.ticket {
+  position: relative;
+  width: 330px;
+  height: inherit;
+  padding: 55px 40px;
+  background-color: rgba(81, 97, 91, 0.082);
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ticket .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2px;
+}
+
+.ticket .title .avatar {
+  position: relative;
+  height: 50px;
+  width: 70px;
+}
+
+.ticket .title .avatar img {
+  border-radius: 10px;
+  height: 100%;
+}
+
+.ticket .title .avatar .status {
+  position: absolute;
+  display: block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #24f892;
+  border: 1px solid black;
+  top: -3px;
+  right: 35px;
+}
+
+.ticket .title a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.ticket .destination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ticket .destination .location .city {
+  font-size: 28px;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+}
+
+.ticket .destination .location .country {
+  font-size: 10px;
+  text-transform: capitalize;
+  display: block;
+  position: relative;
+  color: #8d959d;
+  text-align: center;
+  top: 6px;
+}
+
+.ticket .destination .plane {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
+.ticket .destination .plane svg {
+  fill: white;
+}
+
+.ticket .destination .plane hr {
+  width: 80px;
+  border: none;
+  border-top: 2px dashed rgba(208, 229, 255, 0.3);
+  position: relative;
+  bottom: 20px;
+}
+
+.ticket .price-box {
+  margin-top: 35px;
+}
+
+.ticket .price-box .price-deets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #35353b;
+  padding: 26px 18px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 8px 5px rgba(29, 28, 31, 0.096);
+          box-shadow: 0px 1px 8px 5px rgba(29, 28, 31, 0.096);
+}
+
+.ticket .price-box .price-deets .price {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.ticket .price-box .price-deets .seat {
+  color: #777771;
+}
+
+.ticket .price-box .pencil {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #35353b;
+  -webkit-box-shadow: 0px 1px 8px 5px rgba(29, 28, 31, 0.096);
+          box-shadow: 0px 1px 8px 5px rgba(29, 28, 31, 0.096);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  position: relative;
+  bottom: 14px;
+}
+
+.ticket .price-box .pencil svg {
+  height: 15px;
+  fill: #24f892;
+}
+
+.ticket .price-box .flight-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 16px;
+}
+
+.ticket .price-box .flight-date .date {
+  font-size: 12px;
+  border-radius: 9px;
+  font-weight: 600;
+  border: 1px solid #424547;
+  padding: 9px 22px;
+}
+
+.ticket .confirm-area {
+  position: relative;
+  top: 80px;
+}
+
+.ticket .confirm-area .warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.ticket .confirm-area .warning .warning-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: grey;
+}
+
+.ticket .confirm-area .warning .warning-message span {
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.ticket .confirm-area .warning .time {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ticket .confirm-area .confirm {
+  text-transform: capitalize;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 0;
+  border-radius: 8px;
+  background-color: #24f892;
+  cursor: pointer;
+}
+
+.ticket::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 36px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  -webkit-transform: translate(0 -50%);
+          transform: translate(0 -50%);
+  cursor: pointer;
+  background-color: #4d4a4a;
+}
+/*# sourceMappingURL=style.css.map */
